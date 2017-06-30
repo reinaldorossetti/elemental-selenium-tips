@@ -51,7 +51,7 @@ end
 
 def window_first(current_window)
   
-  # go to the last window
+  # go to the first window
   puts "current_window: %s" % current_window
   all_windows = @driver.window_handles
   puts  all_windows
