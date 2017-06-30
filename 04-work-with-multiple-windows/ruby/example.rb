@@ -38,3 +38,24 @@ run do
   @driver.switch_to.window(new_window)
   expect(@driver.title).to eql 'New Window'
 end
+
+def window_last(first_window)
+  
+  # go to the last window
+  puts "first_window: %s" % first_window
+  all_windows = @driver.window_handles
+  puts  all_windows
+  @driver.switch_to.window  all_windows[-1]
+
+end
+
+def window_first(current_window)
+  
+  # go to the last window
+  puts "current_window: %s" % current_window
+  all_windows = @driver.window_handles
+  puts  all_windows
+  @driver.switch_to.window  all_windows[0]
+
+end
+
